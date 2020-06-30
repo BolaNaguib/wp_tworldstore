@@ -16,7 +16,9 @@
 
                     </div>
                     <div class="p-4">
-                        <span class="font-bold text-xl mb-2"> Sky Lantern</span>
+                        <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">Sky Lantern</a>
+
+                        <!-- <span class="font-bold text-xl mb-2"> Sky Lantern</span> -->
                         <hr class="my-4">
                         <div class="grid grid-cols-2 gap-4 md:grid-cols-2">
                             <div>
@@ -30,6 +32,11 @@
                             <p class="font-bold text-xl">65 $</p>
                             <button class="px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">Add
                                 to cart</button>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between items-center">
+                            <span class="font-light text-gray-600">mar 10, 2019</span>
+                            <a class="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500" href="#">Design</a>
                         </div>
                     </div>
                 </div>

@@ -9,6 +9,10 @@ module.exports = {
 				main: "#ad46a8",
 				secondary: "#ec509a",
 			},
+			fontFamily: {
+				body: ["Poppins", "sans-serif"],
+				display: ["Poppins", "sans-serif"],
+			},
 		},
 	},
 	variants: {},

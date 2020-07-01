@@ -1056,6 +1056,8 @@ img,video{max-width:100%;height:auto}
 .font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.font-body{font-family:Poppins,sans-serif}
+.font-display{font-family:Poppins,sans-serif}
 .font-hairline{font-weight:100}
 .font-thin{font-weight:200}
 .font-light{font-weight:300}
@@ -4658,6 +4660,8 @@ img,video{max-width:100%;height:auto}
 .sm\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .sm\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .sm\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.sm\:font-body{font-family:Poppins,sans-serif}
+.sm\:font-display{font-family:Poppins,sans-serif}
 .sm\:font-hairline{font-weight:100}
 .sm\:font-thin{font-weight:200}
 .sm\:font-light{font-weight:300}
@@ -8260,6 +8264,8 @@ img,video{max-width:100%;height:auto}
 .md\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .md\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .md\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.md\:font-body{font-family:Poppins,sans-serif}
+.md\:font-display{font-family:Poppins,sans-serif}
 .md\:font-hairline{font-weight:100}
 .md\:font-thin{font-weight:200}
 .md\:font-light{font-weight:300}
@@ -11862,6 +11868,8 @@ img,video{max-width:100%;height:auto}
 .lg\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .lg\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .lg\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.lg\:font-body{font-family:Poppins,sans-serif}
+.lg\:font-display{font-family:Poppins,sans-serif}
 .lg\:font-hairline{font-weight:100}
 .lg\:font-thin{font-weight:200}
 .lg\:font-light{font-weight:300}
@@ -15464,6 +15472,8 @@ img,video{max-width:100%;height:auto}
 .xl\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .xl\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .xl\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.xl\:font-body{font-family:Poppins,sans-serif}
+.xl\:font-display{font-family:Poppins,sans-serif}
 .xl\:font-hairline{font-weight:100}
 .xl\:font-thin{font-weight:200}
 .xl\:font-light{font-weight:300}

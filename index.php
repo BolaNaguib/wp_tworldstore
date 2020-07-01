@@ -4,6 +4,35 @@
 
 <!-- START section -->
 <div class='section my-10'>
+    <!-- START container mx-auto px-4 -->
+    <div class='container mx-auto px-4'>
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+            <?php for ($i = 0; $i < 8; $i++) : ?>
+                <div class="bg-white rounded shadow-md relative overflow-hidden  rounded-lg  shadow-lg h-70">
+                    <div class="relative  flex items-center justify-center">
+                        <img class="relative w-full" src="<?php echo get_template_directory_uri() ?>/assets/img/lantern.jpg" alt="">
+                    </div>
+                    <div class="absolute bottom-0 w-full text-white px-6 pb-6 mt-6">
+                        <span class="block opacity-75 -mb-1">Indoor</span>
+                        <div class="flex justify-between">
+                            <span class="block font-semibold text-xl">Peace Lily</span>
+                            <span class="block bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$36.00</span>
+                        </div>
+                    </div>
+                </div>
+            <?php endfor ?>
+        </div>
+    </div>
+    <!-- END container mx-auto px-4 -->
+</div>
+<!-- END section -->
+
+
+
+
+
+<!-- START section -->
+<div class='section my-10'>
     <div class="absolute top-0 left-0 z-10 grid-indigo w-16 h-16 md:w-40 md:h-40 md:ml-20 md:mt-24" style="    background-image: radial-gradient(#5a67d8 2px, transparent 2px);
     background-size: 16px 16px;"></div>
     <!-- START container -->

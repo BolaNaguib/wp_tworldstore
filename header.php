@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
 </head>
 
-<body class="bg-gray-100 font-body tracking-wide" <?php body_class() ?>>
+<body class=" font-body tracking-wide" <?php body_class() ?> style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/shapes.svg');">
 
     <!-- START topmenu -->
     <div class='topmenu bg-secondary'>

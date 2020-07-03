@@ -19,7 +19,42 @@
 defined('ABSPATH') || exit;
 
 get_header('shop');
+?>
+<style>
+	.xx::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(35deg, #ad46a8, #ec509a);
+		z-index: 0;
+		opacity: 0.9;
+	}
+</style>
+<!-- START container mx-auto bg-white -->
+<div class='container mx-auto bg-white p-6 pb-0'>
+	<div class="xx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
+    background: url(https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+">
+		<h1 class="text-6xl z-10 relative"> <?php woocommerce_page_title(); ?> </h1>
+		<p class="z-10 relative">Envelopes include sentimental messages for your loved ones to read and cherish! Show your love with written letters in envelopes! ♥️
+			✨♥️Occasions Made Special! ♥️✨
+			<?php echo $woocommerce_taxonomy_archive_description ?>
 
+		</p>
+
+	</div>
+</div>
+<!-- END container mx-auto bg-white -->
+
+<?php
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -30,21 +65,6 @@ get_header('shop');
 do_action('woocommerce_before_main_content');
 
 ?>
-<header class="woocommerce-products-header">
-	<?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
-
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action('woocommerce_archive_description');
-	?>
-</header>
 <?php
 if (woocommerce_product_loop()) {
 
@@ -101,6 +121,6 @@ do_action('woocommerce_after_main_content');
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action('woocommerce_sidebar');
+// do_action('woocommerce_sidebar');
 
 get_footer('shop');

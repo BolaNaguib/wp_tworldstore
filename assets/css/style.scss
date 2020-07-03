@@ -23,3 +23,11 @@
 	@apply bg-main !important;
 	@apply px-2 py-1 !important;
 }
+.posted_in {
+	& a {
+		@apply bg-gray-100 text-main rounded py-1 px-2 transition duration-300 ease-in-out;
+		&:hover {
+			@apply bg-main text-white;
+		}
+	}
+}

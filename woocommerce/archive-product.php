@@ -41,7 +41,7 @@ $image = wp_get_attachment_url($queried_object->term_id);
 <!-- START container mx-auto bg-white -->
 <div class='container mx-auto bg-white p-6 pb-0'>
 	<div class="xx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
-    background: url('<?php echo $imagex ?>');
+    background: url('https://fashionexpert.liberty.me/wp-content/uploads/sites/2519/2019/12/Women-Accessories.jpg');
     background-attachment: fixed;
     background-size: cover;
 	background-repeat: no-repeat;

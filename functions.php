@@ -1,4 +1,10 @@
 <?php
+// Add WooCommerce support
+add_theme_support('woocommerce');
+add_theme_support('wc-product-gallery-zoom');
+add_theme_support('wc-product-gallery-lightbox');
+add_theme_support('wc-product-gallery-slider');
+
 function add_enqueue_styles()
 {
     wp_enqueue_style('theme_style',  get_template_directory_uri() . '/style.min.css', 1);

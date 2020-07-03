@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class=" font-body tracking-wide" <?php body_class() ?> style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/shapes.svg');">
+<body <?php body_class('font-body tracking-wide'); ?> style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/shapes.svg');">
 
     <!-- START topmenu -->
     <div class='topmenu bg-secondary'>

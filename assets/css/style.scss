@@ -9,3 +9,11 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.woocommerce .woocommerce-breadcrumb {
+	@apply text-white;
+	@apply p-2;
+	& a {
+		@apply text-white;  
+	}
+}

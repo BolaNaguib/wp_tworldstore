@@ -3663,6 +3663,8 @@ img,video{max-width:100%;height:auto}
 .delay-500{-webkit-transition-delay:500ms;transition-delay:500ms}
 .delay-700{-webkit-transition-delay:700ms;transition-delay:700ms}
 .delay-1000{-webkit-transition-delay:1000ms;transition-delay:1000ms}
+.woocommerce .woocommerce-breadcrumb{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity));padding:.5rem}
+.woocommerce .woocommerce-breadcrumb a{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
 .sm\:space-x-0>:not(template) ~ :not(template){--space-x-reverse:0;margin-right:calc(0px * var(--space-x-reverse));margin-left:calc(0px * calc(1 - var(--space-x-reverse)))}

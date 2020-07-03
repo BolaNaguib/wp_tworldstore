@@ -14,6 +14,12 @@
 	@apply text-white;
 	@apply p-2;
 	& a {
-		@apply text-white;  
+		@apply text-white;
 	}
+}
+.button {
+	@apply text-white !important;
+	@apply font-normal !important;
+	@apply bg-main !important;
+	@apply px-2 py-1 !important;
 }

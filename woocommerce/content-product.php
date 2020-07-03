@@ -19,13 +19,34 @@
 defined('ABSPATH') || exit;
 
 global $product;
-
+$id = $product->get_id();
 // Ensure visibility.
 if (empty($product) || !$product->is_visible()) {
 	return;
 }
 ?>
-<li <?php wc_product_class('', $product); ?>>
+<li <?php wc_product_class('bg-white rounded shadow-md relative overflow-hidden  rounded-lg  shadow-lg', $product); ?>>
+
+	<a href="<?php echo get_permalink($id) ?>">
+
+		<div class="relative  flex items-center justify-center">
+			<img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo get_template_directory_uri() ?>/assets/img/lantern.jpg" alt="">
+		</div>
+		<div class="absolute bottom-0 w-full text-white px-2 pb-2 mt-6">
+			<!-- <span class="block opacity-75 -mb-1">Category</span> -->
+			<div class="flex justify-between">
+				<span class="block bg-secondary rounded-full px-3 py-2 font-semibold text-sm"><?php echo the_title(); ?></span>
+				<?php if ($price_html = $product->get_price_html()) : ?>
+				<span class="block bg-main rounded-full text-white text-xs font-regular px-3 py-2 leading-none flex items-center price"><?php echo $price_html; ?></span>
+			<?php endif; ?>
+			</div>
+		</div>
+	</a>
+
+
+
+
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

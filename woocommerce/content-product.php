@@ -43,7 +43,7 @@ if (empty($product) || !$product->is_visible()) {
 				</div>
 			</div>
 		</div>
-		<span class="visible lg:hidden block px-3 py-2 font-semibold text-base text-center text-main sm:text-sm"><?php echo the_title(); ?></span>
+		<span class="visible lg:hidden block px-3 py-2 font-semibold text-sm text-center text-main sm:text-sm"><?php echo the_title(); ?></span>
 
 
 	</a>

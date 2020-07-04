@@ -39,7 +39,8 @@ get_header('shop'); ?>
 
 		<?php endwhile; // end of the loop. 
 		?>
-
+<?php echo do_shortcode('[woo-prod-previous]'); ?>
+<?php echo do_shortcode('[woo-prod-next]'); ?>
 	<?php
 	/**
 	 * woocommerce_after_main_content hook.

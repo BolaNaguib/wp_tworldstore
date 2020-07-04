@@ -33,6 +33,11 @@ if (empty($product) || !$product->is_visible()) {
 			<div class="relative  flex items-center justify-center overflow-hidden">
 				<img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo $image[0]; ?>" alt="">
 			</div>
+			<div class="text-secondary absolute top-0 right-0">
+				<?php echo do_shortcode('[ti_wishlists_addtowishlist]') ?>
+
+			</div>
+
 			<div class="absolute bottom-0 w-full text-white px-1 md:px-2 pb-2 mt-6">
 				<!-- <span class="block opacity-75 -mb-1">Category</span> -->
 				<div class="flex justify-between">
@@ -43,8 +48,8 @@ if (empty($product) || !$product->is_visible()) {
 				</div>
 			</div>
 		</div>
-		<span class="visible lg:hidden block px-3 py-2 font-semibold text-sm text-center text-main sm:text-sm"><?php echo the_title(); ?></span>
 
+		<span class="visible lg:hidden block px-3 py-2 font-semibold text-sm text-center text-main sm:text-sm"><?php echo the_title(); ?></span>
 
 	</a>
 

@@ -33,12 +33,12 @@ if (empty($product) || !$product->is_visible()) {
 		<div class="relative  flex items-center justify-center">
 			<img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo $image[0]; ?>" alt="">
 		</div>
-		<div class="absolute bottom-0 w-full text-white px-2 pb-2 mt-6">
+		<div class="absolute bottom-0 w-full text-white px-1 md:px-2 pb-2 mt-6">
 			<!-- <span class="block opacity-75 -mb-1">Category</span> -->
 			<div class="flex justify-between">
-				<span class="block bg-secondary rounded-full px-3 py-2 font-semibold text-xs sm:text-sm"><?php echo the_title(); ?></span>
+				<span class="block bg-secondary rounded-full p-1 md:px-3 md:py-2 font-regular md:font-semibold text-xs sm:text-sm"><?php echo the_title(); ?></span>
 				<?php if ($price_html = $product->get_price_html()) : ?>
-					<span class="block bg-main rounded-full text-white text-xs font-regular px-3 py-2 leading-none flex items-center price"><?php echo $price_html; ?></span>
+					<span class="block bg-main rounded-full text-white text-xs font-regular p-1 md:px-3 md:py-2 leading-none flex items-center "><?php echo $price_html; ?></span>
 				<?php endif; ?>
 			</div>
 		</div>

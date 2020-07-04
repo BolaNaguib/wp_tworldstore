@@ -70,3 +70,190 @@ function bbloomer_previous_product()
     return ob_get_clean();
 }
 add_shortcode('woo-prod-previous', 'bbloomer_previous_product');
+
+/**
+ * @snippet       Add input field to products - WooCommerce
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 3.9
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+
+// -----------------------------------------
+// 1. Show custom input field above Add to Cart
+
+add_action('woocommerce_before_add_to_cart_button', 'bbloomer_product_add_on', 9);
+
+function bbloomer_product_add_on()
+{
+    $value = isset($_POST['custom_text_add_on']) ? sanitize_text_field($_POST['_custom_text_add_on']) : '';
+    echo '<div><label>Custom Text Add-On <abbr class="required" title="required">*</abbr></label><p><input name="custom_text_add_on" value="' . $value . '"></p></div>';
+}
+
+// -----------------------------------------
+// 2. Throw error if custom input field empty
+
+add_filter('woocommerce_add_to_cart_validation', 'bbloomer_product_add_on_validation', 10, 3);
+
+function bbloomer_product_add_on_validation($passed, $product_id, $qty)
+{
+    if (isset($_POST['custom_text_add_on']) && sanitize_text_field($_POST['custom_text_add_on']) == '') {
+        wc_add_notice('Custom Text Add-On is a required field', 'error');
+        $passed = false;
+    }
+    return $passed;
+}
+
+// -----------------------------------------
+// 3. Save custom input field value into cart item data
+
+add_filter('woocommerce_add_cart_item_data', 'bbloomer_product_add_on_cart_item_data', 10, 2);
+
+function bbloomer_product_add_on_cart_item_data($cart_item, $product_id)
+{
+    if (isset($_POST['custom_text_add_on'])) {
+        $cart_item['custom_text_add_on'] = sanitize_text_field($_POST['custom_text_add_on']);
+    }
+    return $cart_item;
+}
+
+// -----------------------------------------
+// 4. Display custom input field value @ Cart
+
+add_filter('woocommerce_get_item_data', 'bbloomer_product_add_on_display_cart', 10, 2);
+
+function bbloomer_product_add_on_display_cart($data, $cart_item)
+{
+    if (isset($cart_item['custom_text_add_on'])) {
+        $data[] = array(
+            'name' => 'Custom Text Add-On',
+            'value' => sanitize_text_field($cart_item['custom_text_add_on'])
+        );
+    }
+    return $data;
+}
+
+// -----------------------------------------
+// 5. Save custom input field value into order item meta
+
+add_action('woocommerce_add_order_item_meta', 'bbloomer_product_add_on_order_item_meta', 10, 2);
+
+function bbloomer_product_add_on_order_item_meta($item_id, $values)
+{
+    if (!empty($values['custom_text_add_on'])) {
+        wc_add_order_item_meta($item_id, 'Custom Text Add-On', $values['custom_text_add_on'], true);
+    }
+}
+
+// -----------------------------------------
+// 6. Display custom input field value into order table
+
+add_filter('woocommerce_order_item_product', 'bbloomer_product_add_on_display_order', 10, 2);
+
+function bbloomer_product_add_on_display_order($cart_item, $order_item)
+{
+    if (isset($order_item['custom_text_add_on'])) {
+        $cart_item['custom_text_add_on'] = $order_item['custom_text_add_on'];
+    }
+    return $cart_item;
+}
+
+// -----------------------------------------
+// 7. Display custom input field value into order emails
+
+add_filter('woocommerce_email_order_meta_fields', 'bbloomer_product_add_on_display_emails');
+
+function bbloomer_product_add_on_display_emails($fields)
+{
+    $fields['custom_text_add_on'] = 'Custom Text Add-On';
+    return $fields;
+}
+
+
+/**
+ * @snippet       Plus Minus Quantity Buttons @ WooCommerce Single Product Page
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 3.8
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+
+// -------------
+// 1. Show Buttons
+
+// add_action('woocommerce_before_add_to_cart_quantity', 'bbloomer_display_quantity_plus');
+
+function bbloomer_display_quantity_plus()
+{
+    echo '<button type="button" class="plus bg-secondary px-3 text-white hover:bg-main" >+</button></div>';
+}
+
+// add_action('woocommerce_after_add_to_cart_quantity', 'bbloomer_display_quantity_minus');
+
+function bbloomer_display_quantity_minus()
+{
+    echo '<div class="inline-block float-left mr-4 border border-secondary" ><button type="button" class="minus  bg-secondary px-3 text-white hover:bg-main" >-</button>';
+}
+
+// Note: to place minus @ left and plus @ right replace above add_actions with:
+add_action('woocommerce_before_add_to_cart_quantity', 'bbloomer_display_quantity_minus');
+add_action('woocommerce_after_add_to_cart_quantity', 'bbloomer_display_quantity_plus');
+
+
+
+// -------------
+// 2. Trigger jQuery script
+
+add_action('wp_footer', 'bbloomer_add_cart_quantity_plus_minus');
+
+function bbloomer_add_cart_quantity_plus_minus()
+{
+    // Only run this on the single product page
+    if (!is_product()) return;
+?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+
+            $('form.cart').on('click', 'button.plus, button.minus', function() {
+
+                // Get current quantity values
+                var qty = $(this).closest('form.cart').find('.qty');
+                var val = parseFloat(qty.val());
+                var max = parseFloat(qty.attr('max'));
+                var min = parseFloat(qty.attr('min'));
+                var step = parseFloat(qty.attr('step'));
+
+                // Change the value if plus or minus
+                if ($(this).is('.plus')) {
+                    if (max && (max <= val)) {
+                        qty.val(max);
+                    } else {
+                        qty.val(val + step);
+                    }
+                } else {
+                    if (min && (min >= val)) {
+                        qty.val(min);
+                    } else if (val > 1) {
+                        qty.val(val - step);
+                    }
+                }
+
+            });
+
+        });
+    </script>
+    <style>
+        .single-product div.product form.cart .quantity {
+            float: none !important;
+            margin: 0 !important;
+            display: inline-block;
+        }
+
+        .woocommerce .quantity .qty {
+            width: 40px;
+            padding-left: 15px;
+            text-align: center;
+        }
+    </style>
+<?php
+}

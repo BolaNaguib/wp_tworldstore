@@ -24,20 +24,7 @@ get_header('shop');
 $queried_object = get_queried_object();
 $image = wp_get_attachment_url($queried_object->term_id);
 ?>
-<style>
-	.xx::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(35deg, #ad46a8, #ec509a);
-		z-index: 0;
-		opacity: 0.9;
-	}
-</style>
+
 <!-- START container mx-auto bg-white -->
 <div class='container mx-auto bg-white p-6 pb-0'>
 	<div class="xx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 

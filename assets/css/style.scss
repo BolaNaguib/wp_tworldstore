@@ -31,3 +31,15 @@
 		}
 	}
 }
+.xx::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(35deg, #ad46a8, #ec509a);
+	z-index: 0;
+	opacity: 0.9;
+}

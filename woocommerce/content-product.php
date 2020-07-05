@@ -43,7 +43,7 @@ if (empty($product) || !$product->is_visible()) {
 				<div class="flex justify-between">
 					<span class="invisible lg:visible block bg-secondary rounded-full p-1 md:px-3 md:py-2 font-regular md:font-semibold text-xs sm:text-sm"><?php echo the_title(); ?></span>
 					<?php if ($price_html = $product->get_price_html()) : ?>
-						<span class="block bg-main rounded-full text-white text-xs font-regular  px-3 py-2 leading-none flex items-center "><?php echo $price_html; ?></span>
+						<span class="block bg-main rounded-full text-white text-xs font-regular  py-1 px-2 md:px-3 :py-2 leading-none flex items-center "><?php echo $price_html; ?></span>
 					<?php endif; ?>
 				</div>
 			</div>

@@ -199,11 +199,6 @@ function bbloomer_display_quantity_minus()
 add_action('woocommerce_before_add_to_cart_quantity', 'bbloomer_display_quantity_minus');
 add_action('woocommerce_after_add_to_cart_quantity', 'bbloomer_display_quantity_plus');
 
-function xx()
-{
-    echo 'test';
-}
-add_action('woocommerce_before_single_product_summary', 'xx');
 
 
 // -------------

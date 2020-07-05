@@ -45,8 +45,8 @@ if (post_password_required()) {
 
 	?>
 
-	<div class="summary entry-summary">
-		<div>
+	<div class="summary entry-summary relative">
+		<div class='absolute top-0 right-0 border rounded text-secondary border-secondary'>
 			<?php echo do_shortcode('[ti_wishlists_addtowishlist]') ?>
 
 		</div>

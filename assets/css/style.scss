@@ -43,3 +43,31 @@
 	z-index: 0;
 	opacity: 0.9;
 }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+	display: none;
+}
+
+ul.tabs {
+	@apply p-0 !important;
+	& li {
+		@apply pl-0 border-0 bg-transparent rounded-b-none rounded-t !important;
+		& a {
+			@apply bg-secondary px-4 py-2 font-normal text-white text-sm capitalize !important;
+
+			&:hover {
+				@apply bg-main !important;
+			}
+		}
+		&.active {
+			@apply border-0 !important;
+			& a {
+				@apply text-white bg-main !important;
+			}
+		}
+		&::before,
+		&::after {
+			@apply hidden !important;
+		}
+	}
+}

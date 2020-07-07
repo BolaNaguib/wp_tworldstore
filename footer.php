@@ -12,6 +12,7 @@
     </div>
 </section> -->
 
+</div>
 <footer class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-12 pb-10 text-center sm:text-left">
     <div class="flex flex-col sm:flex-row sm:flex-wrap container mx-auto px-6">
         <!-- <div class="mt-12 sm:w-1/2 lg:w-2/5 lg:mt-0 lg:pl-12">

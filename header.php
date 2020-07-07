@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
+<?php
 // ACF FIELDS
 $logo = get_field('logo', 'options');
 $header_js = get_field('header_js', 'options');
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +69,7 @@ $header_js = get_field('header_js', 'options');
         <div class="container mx-auto">
             <nav class="flex items-center bg-white p-3 flex-wrap justify-between">
                 <a href="#" class="p-2 mr-4 inline-flex items-center h-auto">
-                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"  title="<?php echo $logo['title'] ?>">
+                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title'] ?>">
                 </a>
                 <div class="w-auto h-10 pl-3 pr-2 bg-white border rounded-full flex justify-between items-center relative">
                     <input type="search" name="search" id="search" placeholder="Search" class="appearance-none w-full outline-none focus:outline-none active:outline-none" />
@@ -84,3 +85,6 @@ $header_js = get_field('header_js', 'options');
         </div>
     </div>
     <!-- END bg-white -->
+
+
+    <div class="container relative  mx-auto p-6 shadow bg-white" style="z-index: ">

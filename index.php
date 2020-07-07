@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!--  home page  -->
 
-<?php include_once('block/contactform.php') ?>
+
 
 
 <?php if (have_posts()) : ?>

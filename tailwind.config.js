@@ -10,8 +10,8 @@ module.exports = {
 				secondary: "#ec509a",
 			},
 			fontFamily: {
-				body: ["Poppins", "sans-serif"],
-				display: ["Poppins", "sans-serif"],
+				body: ["Satisfy", "cursive"],
+				display: ["Satisfy", "cursive"],
 			},
 		},
 	},

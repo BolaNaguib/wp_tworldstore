@@ -85,3 +85,17 @@ ul.tabs {
 		}
 	}
 }
+.comment-form {
+	& input {
+		@apply w-full text-sm  relative  border rounded  py-2 px-2 !important;
+		&:focus {
+			@apply outline-none;
+		}
+	}
+	& textarea {
+		@apply w-full text-sm  relative  border rounded  py-2 px-2 !important;
+		&:focus {
+			@apply outline-none;
+		}
+	}
+}

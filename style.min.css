@@ -1056,8 +1056,8 @@ img,video{max-width:100%;height:auto}
 .font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.font-body{font-family:Satisfy,cursive}
-.font-display{font-family:Satisfy,cursive}
+.font-body{font-family:Lobster Two,cursive}
+.font-display{font-family:Lobster Two,cursive}
 .font-hairline{font-weight:100}
 .font-thin{font-weight:200}
 .font-light{font-weight:300}
@@ -3681,6 +3681,10 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .forminput input:focus{outline:0}
 .forminput textarea{width:100% !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
 .forminput textarea:focus{outline:0}
+.comment-form input{width:100% !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
+.comment-form input:focus{outline:0}
+.comment-form textarea{width:100% !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
+.comment-form textarea:focus{outline:0}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
 .sm\:space-x-0>:not(template) ~ :not(template){--space-x-reverse:0;margin-right:calc(0px * var(--space-x-reverse));margin-left:calc(0px * calc(1 - var(--space-x-reverse)))}
@@ -4678,8 +4682,8 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .sm\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .sm\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .sm\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.sm\:font-body{font-family:Satisfy,cursive}
-.sm\:font-display{font-family:Satisfy,cursive}
+.sm\:font-body{font-family:Lobster Two,cursive}
+.sm\:font-display{font-family:Lobster Two,cursive}
 .sm\:font-hairline{font-weight:100}
 .sm\:font-thin{font-weight:200}
 .sm\:font-light{font-weight:300}
@@ -8282,8 +8286,8 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .md\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .md\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .md\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.md\:font-body{font-family:Satisfy,cursive}
-.md\:font-display{font-family:Satisfy,cursive}
+.md\:font-body{font-family:Lobster Two,cursive}
+.md\:font-display{font-family:Lobster Two,cursive}
 .md\:font-hairline{font-weight:100}
 .md\:font-thin{font-weight:200}
 .md\:font-light{font-weight:300}
@@ -11886,8 +11890,8 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .lg\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .lg\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .lg\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.lg\:font-body{font-family:Satisfy,cursive}
-.lg\:font-display{font-family:Satisfy,cursive}
+.lg\:font-body{font-family:Lobster Two,cursive}
+.lg\:font-display{font-family:Lobster Two,cursive}
 .lg\:font-hairline{font-weight:100}
 .lg\:font-thin{font-weight:200}
 .lg\:font-light{font-weight:300}
@@ -15490,8 +15494,8 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .xl\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .xl\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .xl\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.xl\:font-body{font-family:Satisfy,cursive}
-.xl\:font-display{font-family:Satisfy,cursive}
+.xl\:font-body{font-family:Lobster Two,cursive}
+.xl\:font-display{font-family:Lobster Two,cursive}
 .xl\:font-hairline{font-weight:100}
 .xl\:font-thin{font-weight:200}
 .xl\:font-light{font-weight:300}

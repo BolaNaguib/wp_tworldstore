@@ -3689,6 +3689,9 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .woocommerce-billing-fields__field-wrapper input:focus,.woocommerce-MyAccount-content input:focus{outline:0}
 .woocommerce-billing-fields__field-wrapper textarea,.woocommerce-MyAccount-content textarea{width:100% !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
 .woocommerce-billing-fields__field-wrapper textarea:focus,.woocommerce-MyAccount-content textarea:focus{outline:0}
+.mega-menu{display:none;left:0;position:absolute;text-align:left;width:100%;z-index:99999}
+.hoverable{position:static}
+.hoverable:hover .mega-menu{display:block}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
 .sm\:space-x-0>:not(template) ~ :not(template){--space-x-reverse:0;margin-right:calc(0px * var(--space-x-reverse));margin-left:calc(0px * calc(1 - var(--space-x-reverse)))}

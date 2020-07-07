@@ -114,3 +114,19 @@ ul.tabs {
 		}
 	}
 }
+
+.mega-menu {
+	display: none;
+	left: 0;
+	position: absolute;
+	text-align: left;
+	width: 100%;
+	z-index: 99999;
+}
+.hoverable {
+	position: static;
+}
+
+.hoverable:hover .mega-menu {
+	display: block;
+}

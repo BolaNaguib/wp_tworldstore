@@ -86,8 +86,14 @@ add_action('woocommerce_before_add_to_cart_button', 'bbloomer_product_add_on', 9
 
 function bbloomer_product_add_on()
 {
-    $value = isset($_POST['custom_text_add_on']) ? sanitize_text_field($_POST['_custom_text_add_on']) : '';
-    echo '<div><label>Custom Text Add-On <abbr class="required" title="required">*</abbr></label><p><input name="custom_text_add_on" value="' . $value . '"></p></div>';
+    // $acf = acf_get_local_field('add_name');
+    $acf = get_field("add_name");
+    if ($acf) {
+        $value = isset($_POST['custom_text_add_on']) ? sanitize_text_field($_POST['_custom_text_add_on']) : '';
+        echo '<div class="forminput "><label class="block mb-2">Add Custom Name </label><p><input name="custom_text_add_on" value="' . $value . '"></p></div><hr class="my-4">';
+    } else {
+        $value = isset($_POST['custom_text_add_on']) ? sanitize_text_field($_POST['_custom_text_add_on']) : '';
+    }
 }
 
 // -----------------------------------------
@@ -98,7 +104,7 @@ add_filter('woocommerce_add_to_cart_validation', 'bbloomer_product_add_on_valida
 function bbloomer_product_add_on_validation($passed, $product_id, $qty)
 {
     if (isset($_POST['custom_text_add_on']) && sanitize_text_field($_POST['custom_text_add_on']) == '') {
-        wc_add_notice('Custom Text Add-On is a required field', 'error');
+        wc_add_notice('Custom Name is a required field', 'error');
         $passed = false;
     }
     return $passed;
@@ -126,7 +132,7 @@ function bbloomer_product_add_on_display_cart($data, $cart_item)
 {
     if (isset($cart_item['custom_text_add_on'])) {
         $data[] = array(
-            'name' => 'Custom Text Add-On',
+            'name' => 'Custom Name',
             'value' => sanitize_text_field($cart_item['custom_text_add_on'])
         );
     }
@@ -141,7 +147,7 @@ add_action('woocommerce_add_order_item_meta', 'bbloomer_product_add_on_order_ite
 function bbloomer_product_add_on_order_item_meta($item_id, $values)
 {
     if (!empty($values['custom_text_add_on'])) {
-        wc_add_order_item_meta($item_id, 'Custom Text Add-On', $values['custom_text_add_on'], true);
+        wc_add_order_item_meta($item_id, 'Custom Name', $values['custom_text_add_on'], true);
     }
 }
 
@@ -165,7 +171,7 @@ add_filter('woocommerce_email_order_meta_fields', 'bbloomer_product_add_on_displ
 
 function bbloomer_product_add_on_display_emails($fields)
 {
-    $fields['custom_text_add_on'] = 'Custom Text Add-On';
+    $fields['custom_text_add_on'] = 'Custom Name';
     return $fields;
 }
 

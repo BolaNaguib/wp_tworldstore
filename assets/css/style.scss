@@ -130,3 +130,9 @@ ul.tabs {
 .hoverable:hover .mega-menu {
 	display: block;
 }
+
+.woocommerce-mini-cart__buttons {
+	& a {
+		@apply block text-center mt-2 !important;
+	}
+}

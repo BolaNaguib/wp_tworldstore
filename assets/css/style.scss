@@ -136,3 +136,22 @@ ul.tabs {
 		@apply block text-center mt-2 !important;
 	}
 }
+
+.woocommerce-mini-cart__total {
+	&.total {
+		@apply text-center border-t pt-1 mt-1 block text-secondary !important;
+	}
+}
+
+img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+	float: none !important;
+	max-width: 32px !important;
+}
+
+.cartContainer {
+	display: none;
+}
+
+.cartContainerx:hover .cartContainer {
+	display: block;
+}

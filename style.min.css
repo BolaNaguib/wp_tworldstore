@@ -3693,6 +3693,10 @@ ul.tabs li::before,ul.tabs li::after{display:none !important}
 .hoverable{position:static}
 .hoverable:hover .mega-menu{display:block}
 .woocommerce-mini-cart__buttons a{display:block !important;text-align:center !important;margin-top:.5rem !important}
+.woocommerce-mini-cart__total.total{text-align:center !important;border-top-width:1px !important;padding-top:.25rem !important;margin-top:.25rem !important;display:block !important;--text-opacity:1 !important;color:#ec509a !important;color:rgba(236,80,154,var(--text-opacity)) !important}
+img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{float:none !important;max-width:32px !important}
+.cartContainer{display:none}
+.cartContainerx:hover .cartContainer{display:block}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
 .sm\:space-x-0>:not(template) ~ :not(template){--space-x-reverse:0;margin-right:calc(0px * var(--space-x-reverse));margin-left:calc(0px * calc(1 - var(--space-x-reverse)))}

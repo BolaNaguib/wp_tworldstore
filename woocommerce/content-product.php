@@ -29,7 +29,8 @@ if (empty($product) || !$product->is_visible()) {
 <li <?php wc_product_class('', $product); ?>>
 
 	<a href="<?php echo get_permalink($id) ?>">
-		<div class="bg-white rounded shadow-md relative overflow-hidden  rounded-lg  shadow-lg">
+		<div class="bg-white rounded shadow-md relative  rounded-lg  shadow-lg  mt-4">
+			<span class="absolute top-0 left-0 ml-4 -mt-2 px-2 py-1 z-10 bg-secondary text-white rounded text-xs "> New </span>
 			<div class="relative  flex items-center justify-center overflow-hidden">
 				<img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo $image[0]; ?>" alt="">
 			</div>

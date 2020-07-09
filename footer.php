@@ -1,4 +1,4 @@
-<!-- <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
+<!-- <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32 col-span-2">
     <div class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
         <div class="w-full md:w-2/3">
             <h2 class="text-3xl leading-tight font-bold">Need help?</h2>

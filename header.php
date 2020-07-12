@@ -118,66 +118,70 @@ $header_js = get_field('header_js', 'options');
                             </button>
                             <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
 
+
                                 <ul class="lg:inline-flex lg:flex-row lg:mx-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto 
                                 divide-x divide-gray-200">
+                                <?php if (have_rows('menu','options')) : ?>
+                                    
+<?php while (have_rows('menu','options')) : the_row(); 
+//ACF Fields
+$page_title = get_sub_field('page_title');
+$page_link = get_sub_field('page_link');
+?>
+
                                     <li class="hoverable ">
-                                        <a href="#" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
-                                            <span>Home</span>
+                                        <a href="<?php echo $page_link; ?>" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
+                                            <span><?php echo $page_title; ?></span>
                                         </a>
                                         <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-main">
                                             <div class="container mx-auto w-full flex flex-wrap justify-between mx-2 divide-x divide-white">
-                                                <?php for ($i = 0; $i < 4; $i++) : ?>
+                                                    <?php if (have_rows('sub_menu')) : ?>
+                                                    <?php while (have_rows('sub_menu')) : the_row(); 
+                                                    //ACF Fields
+                                                    
+                                                    ?>
+                                                    
                                                     <ul class="px-4 w-full sm:w-1/2 lg:w-1/4  border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                                        <div class="flex items-center">
-                                                            <h3 class="font-bold text-xl text-white text-bold mb-2">Main Category</h3>
+                                                    <?php 
+$term = get_sub_field('main_category');
+if( $term ): ?>
+<?php echo var_dump($term) ?>
+    <div class="flex items-center">
+        <?php echo $term; ?>
+                                                            <h3 class="font-bold text-xl text-white text-bold mb-2">
+                                                                <a href="<?php echo esc_url( get_term_link( $term ) ); ?>">
+                                                                <?php echo $term->name ;?> sssss
+                                                                </a></h3>
                                                         </div>
+<?php endif; ?>
+                                                    
                                                         <ul>
+                                                        <?php $postx = get_sub_field('sub_category');
+                                                                    if ($postx) : ?>
+                                                                    
+                                                                        <?php foreach ($postx as $post) : // variable must be called $post (IMPORTANT) 
+                                                                        ?>
+                                                                        
+                                                                            <?php setup_postdata($post); ?>
                                                             <li>
-                                                                <a href="#" class="text-white text-sm">Sub Category</a>
+                                                                <a href="<?php echo esc_url( get_term_link( $post ) ); ?>" class="text-white text-sm"><?php echo $post->name ?> </a>
                                                             </li>
-                                                            <li>
-                                                                <a href="#" class="text-white text-sm">Sub Category</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#" class="text-white text-sm">Sub Category</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#" class="text-white text-sm">Sub Category</a>
-                                                            </li>
+                                                            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly  
+                                                                            ?>
+                                                                        <?php endforeach; ?>
+                                                                    <?php endif; ?>
+                                                         
                                                         </ul>
                                                     </ul>
-                                                <?php endfor; ?>
+                                                    
+                                                    <?php endwhile; ?>
+                                                    <?php endif; ?>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="hoverable ">
-                                        <a href="#" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
-                                            <span>About</span>
-                                        </a>
-                                    </li>
-                                    <li class="hoverable ">
-
-                                        <a href="#" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
-                                            <span>Services</span>
-                                        </a>
-                                    </li>
-                                    <li class="hoverable ">
-                                        <a href="#" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
-                                            <span>Gallery</span>
-                                        </a>
-                                    </li>
-                                    <li class="hoverable ">
-                                        <a href="#" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
-                                            <span>Products</span>
-                                        </a>
-                                    </li>
-                                    <li class="hoverable ">
-                                        <a href="#" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
-                                            <span>Contact Us</span>
-                                        </a>
-                                    </li>
-
-
+                                    <?php endwhile; ?>
+<?php endif; ?>
+                                  
 
                                 </ul>
                             </div>

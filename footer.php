@@ -54,7 +54,9 @@
         <p class="text-sm text-gray-600">2020 © yumyums. All rights reserved.</p>
     </div>
 </footer>
-
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat" attribution=setup_tool page_id="107135984368664" theme_color="#ad46a8">
+</div>
 
 
 

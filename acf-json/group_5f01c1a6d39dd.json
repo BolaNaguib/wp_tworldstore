@@ -76,6 +76,41 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_5f0b2c0335622",
+            "label": "Top Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f0b2c0e35623",
+            "label": "Header Custom Text",
+            "name": "header_custom_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -95,5 +130,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593950720
+    "modified": 1594567704
 }

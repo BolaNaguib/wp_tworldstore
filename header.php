@@ -4,6 +4,7 @@
 <?php
 // ACF FIELDS
 $logo = get_field('logo', 'options');
+$header_custom_text = get_field('header_custom_text','options');
 $header_js = get_field('header_js', 'options');
 ?>
 
@@ -41,7 +42,7 @@ $header_js = get_field('header_js', 'options');
         <div class="container mx-auto ">
             <div class="flex justify-between  px-6 items-center">
                 <div>
-                    <span class="text-white mr-2">243 Nasser St, Cairo, Egypt </span> <span class="text-white">|</span> <span class="text-white ml-2"> 010 239 89 330</span>
+                    <span class="text-white mr-2"> <?php echo $header_custom_text ?> </span> <span class="text-white">|</span> <span class="text-white ml-2"> 010 239 89 330</span>
                 </div>
                     <ul class="lg:inline-flex lg:flex-row  lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto justify-end">
                         <?php global $woocommerce ?>

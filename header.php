@@ -137,21 +137,18 @@ $header_js = get_field('header_js', 'options');
                                                  
                                                     <?php while (have_rows('sub_menu')) : the_row(); 
                                                     //ACF Fields
-                                                    
-                                                    ?>
+                                                    $term = get_sub_field('main_category'); ?>
                                                     
                                                     <ul class="px-4 w-full sm:w-1/2 lg:w-1/4  border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                                 
-                                                   <?php 
-                                                    $term = get_sub_field('main_category');
-                                                    if( $term ): ?>
-                                                        <div class="flex items-center">
-                                                            <h3 class="font-bold text-xl text-white text-bold mb-2">
-                                                                <a href="<?php echo esc_url( get_term_link( $term[0] ) ); ?>">
-                                                                <?php echo $term[0]->name ;?>
-                                                                </a></h3>
-                                                        </div>
-                                                        <?php endif; ?>
+                                                        <?php 
+                                                            if( $term ): ?>
+                                                                <div class="flex items-center">
+                                                                    <h3 class="font-bold text-xl text-white text-bold mb-2">
+                                                                        <a href="<?php echo esc_url( get_term_link( $term[0] ) ); ?>">
+                                                                        <?php echo $term[0]->name ;?>
+                                                                        </a></h3>
+                                                                </div>
+                                                                <?php endif; ?>
                                                     
                                                         <ul>
                                                         <?php $postx = get_sub_field('sub_category');

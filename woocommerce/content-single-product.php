@@ -58,6 +58,7 @@ if (post_password_required()) {
 		 * @hooked woocommerce_template_single_rating - 10
 		 * @hooked woocommerce_template_single_price - 10
 		 * @hooked woocommerce_template_single_excerpt - 20
+		 * @hooker extra_info - 25
 		 * @hooked woocommerce_template_single_add_to_cart - 30
 		 * @hooked woocommerce_template_single_meta - 40
 		 * @hooked woocommerce_template_single_sharing - 50
@@ -65,36 +66,7 @@ if (post_password_required()) {
 		 */
 		do_action('woocommerce_single_product_summary');
 		?>
-		<?php 
-		
-// Check rows exists.
-if( have_rows('info') ):
 
-    // Loop through rows.
-    while( have_rows('info') ) : the_row();
-
-        // Load sub field value.
-		$info_title = get_sub_field('info_title');
-		$info_detailes = get_sub_field('info_detailes');
-        // Do something...
-?>
-		<div>
-		<br>
-<hr class="">
-<br>
-<span class="text-2xl text-main"><?php echo $info_title; ?></span>
-<p><?php echo $info_detailes; ?> </p>
-</div>
-
-<?php
-    // End loop.
-    endwhile;
-
-// No value.
-else :
-    // Do something...
-endif;
-		?>
 
 	</div>
 

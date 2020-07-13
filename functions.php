@@ -261,8 +261,43 @@ function bbloomer_add_cart_quantity_plus_minus()
             text-align: center;
         }
     </style>
-<?php
+    <?php
 }
+
+
+// define the woocommerce_single_product_summary callback function
+
+function extra_info()
+{
+
+    // Check rows exists.
+    if (have_rows('info')) :
+
+        // Loop through rows.
+        while (have_rows('info')) : the_row();
+
+            // Load sub field value.
+            $info_title = get_sub_field('info_title');
+            $info_detailes = get_sub_field('info_detailes');
+            // Do something...
+    ?>
+            <div>
+
+                <span class="text-2xl text-main"><?php echo $info_title; ?></span>
+                <p><?php echo $info_detailes; ?> </p>
+            </div>
+            <hr class="my-2">
+
+<?php
+        // End loop.
+        endwhile;
+
+    // No value.
+    else :
+    // Do something...
+    endif;
+};
+add_action('woocommerce_single_product_summary', 'extra_info', 25);
 
 /*********************************************
  *               ACF Theme Settings           *

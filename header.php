@@ -141,15 +141,14 @@ $header_js = get_field('header_js', 'options');
                                                     ?>
                                                     
                                                     <ul class="px-4 w-full sm:w-1/2 lg:w-1/4  border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-                                                    <?php 
+                                                 
+                                                   <?php 
                                                     $term = get_sub_field('main_category');
                                                     if( $term ): ?>
-                                                    <?php echo var_dump($term) ?>
                                                         <div class="flex items-center">
-                                                            <?php echo $term; ?>
                                                             <h3 class="font-bold text-xl text-white text-bold mb-2">
-                                                                <a href="<?php echo esc_url( get_term_link( $term ) ); ?>">
-                                                                <?php echo $term->name ;?> sssss
+                                                                <a href="<?php echo esc_url( get_term_link( $term[0] ) ); ?>">
+                                                                <?php echo $term[0]->name ;?>
                                                                 </a></h3>
                                                         </div>
                                                         <?php endif; ?>

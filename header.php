@@ -121,21 +121,20 @@ $header_js = get_field('header_js', 'options');
 
                                 <ul class="lg:inline-flex lg:flex-row lg:mx-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto 
                                 divide-x divide-gray-200">
-                                <?php if (have_rows('menu','options')) : ?>
-                                    
-<?php while (have_rows('menu','options')) : the_row(); 
-//ACF Fields
-$page_title = get_sub_field('page_title');
-$page_link = get_sub_field('page_link');
-?>
+                                <?php if (have_rows('menu','options')) : ?>                                    
+                                <?php while (have_rows('menu','options')) : the_row(); 
+                                //ACF Fields
+                                $page_title = get_sub_field('page_title');
+                                $page_link = get_sub_field('page_link'); ?>
 
                                     <li class="hoverable ">
                                         <a href="<?php echo $page_link; ?>" class="text-xl lg:inline-flex lg:w-auto w-full px-4 py-10 text-main items-center justify-center hover:bg-main hover:text-white transition duration-300 ease-in-out text-xs">
                                             <span><?php echo $page_title; ?></span>
                                         </a>
+                                        <?php if (have_rows('sub_menu')) : ?>
                                         <div class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-main">
                                             <div class="container mx-auto w-full flex flex-wrap justify-between mx-2 divide-x divide-white">
-                                                    <?php if (have_rows('sub_menu')) : ?>
+                                                 
                                                     <?php while (have_rows('sub_menu')) : the_row(); 
                                                     //ACF Fields
                                                     
@@ -143,17 +142,17 @@ $page_link = get_sub_field('page_link');
                                                     
                                                     <ul class="px-4 w-full sm:w-1/2 lg:w-1/4  border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
                                                     <?php 
-$term = get_sub_field('main_category');
-if( $term ): ?>
-<?php echo var_dump($term) ?>
-    <div class="flex items-center">
-        <?php echo $term; ?>
+                                                    $term = get_sub_field('main_category');
+                                                    if( $term ): ?>
+                                                    <?php echo var_dump($term) ?>
+                                                        <div class="flex items-center">
+                                                            <?php echo $term; ?>
                                                             <h3 class="font-bold text-xl text-white text-bold mb-2">
                                                                 <a href="<?php echo esc_url( get_term_link( $term ) ); ?>">
                                                                 <?php echo $term->name ;?> sssss
                                                                 </a></h3>
                                                         </div>
-<?php endif; ?>
+                                                        <?php endif; ?>
                                                     
                                                         <ul>
                                                         <?php $postx = get_sub_field('sub_category');
@@ -175,12 +174,13 @@ if( $term ): ?>
                                                     </ul>
                                                     
                                                     <?php endwhile; ?>
-                                                    <?php endif; ?>
                                             </div>
                                         </div>
+                                        <?php endif; ?>
+
                                     </li>
                                     <?php endwhile; ?>
-<?php endif; ?>
+                                        <?php endif; ?>
                                   
 
                                 </ul>

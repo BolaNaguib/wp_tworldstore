@@ -76,6 +76,13 @@
             });
         });
     });
+
+    function addClasstoUpload() {
+        console.log('hello');
+        const upload = document.getElementById('wau_file_addon').parentElement.classList.add('uploadContainer');
+    }
+
+    addClasstoUpload();
 </script>
 </body>
 

@@ -155,3 +155,19 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
 .cartContainerx:hover .cartContainer {
 	display: block;
 }
+
+#wau_file_addon {
+	display: block;
+	margin: 10px 0px 20px 0px;
+	box-sizing: border-box;
+}
+
+.uploadContainer {
+	border-bottom: 10px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+	display: none;
+}
+.uploadIsActive .uploadContainer {
+	display: block;
+}

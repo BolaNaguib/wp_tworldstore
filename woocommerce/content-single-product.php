@@ -42,10 +42,11 @@ if (post_password_required()) {
 	 * @hooked woocommerce_show_product_images - 20
 	 */
 	do_action('woocommerce_before_single_product_summary');
-
+	$acf = get_field("add_name");
 	?>
 
-	<div class="summary entry-summary relative">
+
+	<div class="summary entry-summary relative <?php if ($acf) : ?> uploadIsActive <?php endif; ?>">
 		<div class='absolute top-0 right-0 border rounded text-secondary border-secondary'>
 			<?php echo do_shortcode('[ti_wishlists_addtowishlist]') ?>
 

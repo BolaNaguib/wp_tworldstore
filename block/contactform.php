@@ -50,12 +50,21 @@
         </p>
     </div>
     <div>
-        <div id="tabOneForm hidden">
+        <div id="tabOneForm" style="">
             <h3 class="text-2xl text-main"> We are happy to talk to you </h3>
             <hr class="my-4 block">
             <?php echo do_shortcode('[contact-form-7 id="27" title="Contact form 1"]') ?>
         </div>
-
+        <div id="tabTwoForm" style="display: none;">
+            <h3 class="text-2xl text-main"> Second Tab </h3>
+            <hr class="my-4 block">
+            <?php echo do_shortcode('[contact-form-7 id="27" title="Contact form 1"]') ?>
+        </div>
+        <div id="tabThreeBlock" style="display: none;">
+            <h3 class="text-2xl text-main"> Third Tab </h3>
+            <hr class="my-4 block">
+            <?php echo do_shortcode('[contact-form-7 id="27" title="Contact form 1"]') ?>
+        </div>
 
     </div>
 </div>

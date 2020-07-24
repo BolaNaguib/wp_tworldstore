@@ -41,7 +41,7 @@ $header_js = get_field('header_js', 'options');
 
     <!-- START topmenu -->
     <div class='topmenu bg-main border-b'>
-        <div class="container mx-auto ">
+        <div class="container mx-auto px-6">
             <div class="grid grid-cols-3 gap-4  flex items-center">
                 <div>
                     <span class="text-white mr-2"> <?php echo $header_custom_text ?> </span> 

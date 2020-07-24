@@ -113,6 +113,29 @@
 
     addClasstoUpload();
 </script>
+<script>
+    const tabOneBlock = document.getElementById('tabOneBlock');
+    const tabTwoBlock = document.getElementById('tabTwoBlock');
+    const tabThreeBlock = document.getElementById('tabThreeBlock');
+    const tabOneForm = document.getElementById('tabOneForm');
+    const tabTwoForm = document.getElementById('tabTwoForm');
+    const tabThreeBlock = document.getElementById('tabThreeBlock');
+    tabOneBlock.addEventListener('click', function() {
+        tabOneForm.style.display = "block";
+        tabTwoForm.style.display = "none";
+        tabThreeBlock.style.display = "none";
+    });
+    tabTwoBlock.addEventListener('click', function() {
+        tabOneForm.style.display = "none";
+        tabTwoForm.style.display = "block";
+        tabThreeBlock.style.display = "none";
+    });
+    tabThreeBlock.addEventListener('click', function() {
+        tabOneForm.style.display = "none";
+        tabTwoForm.style.display = "none";
+        tabThreeBlock.style.display = "block";
+    });
+</script>
 </body>
 
 </html>

@@ -30,7 +30,19 @@ if (empty($product) || !$product->is_visible()) {
 
 	<a href="<?php echo get_permalink($id) ?>">
 		<div class="bg-white rounded shadow-md relative  rounded-lg  shadow-lg  mt-4">
-			<span class="absolute top-0 left-0 ml-4 -mt-2 px-2 py-1 z-10 bg-secondary text-white rounded text-xs "> New </span>
+		<div class="absolute top-0 left-0 ml-4 -mt-2 z-10">
+		<?php $created = strtotime( $product->get_date_created() );
+   if ( ( time() - ( 60 * 60 * 24 * 30 ) ) < $created ) : ?>
+		<span class=" px-2 py-1  bg-secondary text-white rounded text-xs mr-2"> New </span>
+   <?php endif; ?>
+		<?php if ($product->stock_status = "instock") : ?>
+			<span class=" px-2 py-1  bg-black text-white rounded text-xs mr-2"> Out Of Stock </span>
+			<?php endif; ?>
+			<?php if ($product->sale_price != "") : ?>
+				<span class=" px-2 py-1  bg-main text-white rounded text-xs mr-2"> Sale </span>
+
+			<?php endif; ?>
+		</div>
 			<div class="relative  flex items-center justify-center overflow-hidden">
 				<img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo $image[0]; ?>" alt="">
 			</div>

@@ -35,7 +35,7 @@ if (empty($product) || !$product->is_visible()) {
    if ( ( time() - ( 60 * 60 * 24 * 30 ) ) < $created ) : ?>
 		<span class=" px-2 py-1  bg-secondary text-white rounded text-xs mr-2"> New </span>
    <?php endif; ?>
-		<?php if ($product->stock_status = "instock") : ?>
+		<?php if ($product->stock_status != "instock") : ?>
 			<span class=" px-2 py-1  bg-black text-white rounded text-xs mr-2"> Out Of Stock </span>
 			<?php endif; ?>
 			<?php if ($product->sale_price != "") : ?>

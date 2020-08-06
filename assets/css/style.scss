@@ -73,7 +73,13 @@ ul.tabs {
 }
 .forminput {
 	& input {
-		@apply w-full text-sm  relative  border rounded  py-2 px-2 !important;
+		@apply w-full text-sm  relative  border rounded  py-2 px-2 mb-4 !important;
+		&:focus {
+			@apply outline-none;
+		}
+	}
+	& input[type="checkbox"] {
+		@apply w-auto text-sm  relative  border rounded  py-2 px-2 !important;
 		&:focus {
 			@apply outline-none;
 		}

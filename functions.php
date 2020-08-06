@@ -34,7 +34,7 @@ function add_enqueue_styles()
 {
     wp_enqueue_style('google_font',  'https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
     wp_enqueue_style('material_icons',  'https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css');
-    // wp_enqueue_script('uikit_js', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js', array(), false, true);
+    wp_enqueue_script('uikit_js',  get_template_directory_uri() . '/assets/js/custom.min.js', array(), false, true);
     wp_enqueue_style('theme_style',  get_template_directory_uri() . '/style.min.css', 1);
 }
 
@@ -394,3 +394,24 @@ function section_block_callback($block)
         include(get_theme_file_path("block/{$slug}.php"));
     }
 }
+
+function pippin_login_form_shortcode($atts, $content = null)
+{
+
+    extract(shortcode_atts(array(
+        'redirect' => ''
+    ), $atts));
+
+    if (!is_user_logged_in()) {
+        if ($redirect) {
+            $redirect_url = $redirect;
+        } else {
+            $redirect_url = get_permalink();
+        }
+        $form = wp_login_form(array('echo' => false, 'redirect' => $redirect_url));
+    }
+    return $form;
+}
+add_shortcode('loginform', 'pippin_login_form_shortcode');
+
+?>

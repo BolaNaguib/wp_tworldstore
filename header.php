@@ -206,4 +206,4 @@ $header_js = get_field('header_js', 'options');
     <!-- END bg-white -->
 
 
-    <div class="container relative  mx-auto p-6 shadow bg-white" style="z-index: ">
+    <div class="container relative  mx-auto p-6 shadow bg-white" style="z-index: 1 ">

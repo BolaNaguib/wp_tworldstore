@@ -8,12 +8,14 @@ $header_custom_text = get_field('header_custom_text','options');
 $fb = get_field('facebook','options');
 $ig = get_field('instagram','options');
 $header_js = get_field('header_js', 'options');
+$url = home_url( '/' );
+
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php get_template_part('common/seoheader'); ?>
+    <?php get_template_part('common/seoheader'); ?>  
     <?php wp_head(); ?>
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
@@ -73,7 +75,8 @@ $header_js = get_field('header_js', 'options');
                                 </svg></a>
                         </li>
                         <li>
-                            <a href="#" class=" modal-open   text-white px-2 py-2 block"><svg style="max-height:20px; min-height:20px; height: 100%;" aria-hidden="true" focusable="false" data-prefix="far" data-icon="user-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-user-circle fa-w-16">
+                        <?php if (is_user_logged_in()) :  ?>    <a href="<?php echo $url; ?>my-account"  class="  <?php else : ?>   <a href="#" class=" modal-open     <?php endif; ?>
+                           text-white px-2 py-2 block"><svg style="max-height:20px; min-height:20px; height: 100%;" aria-hidden="true" focusable="false" data-prefix="far" data-icon="user-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-user-circle fa-w-16">
                                     <path fill="currentColor" d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z" class=""></path>
                                 </svg></a>
                         </li>

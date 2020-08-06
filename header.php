@@ -37,7 +37,7 @@ $header_js = get_field('header_js', 'options');
     <?php echo $header_js; ?>
 </head>
 
-<body <?php body_class('font-body tracking-wide'); ?> style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/shapes.svg');">
+<body <?php body_class('font-body tracking-wide'); ?> style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/shapes.svg');background-position: center; background-attachment: fixed;">
 
     <!-- START topmenu -->
     <div class='topmenu bg-main border-b'>

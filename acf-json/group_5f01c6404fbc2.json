@@ -60,6 +60,25 @@
                     "new_lines": "br"
                 }
             ]
+        },
+        {
+            "key": "field_5f2cc288732a6",
+            "label": "extra Search",
+            "name": "extra_search",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -79,5 +98,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593951872
+    "modified": 1596768926
 }

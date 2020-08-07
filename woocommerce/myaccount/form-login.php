@@ -30,10 +30,13 @@ do_action('woocommerce_before_customer_login_form'); ?>
 
 		<?php endif; ?>
 
-		<h2><?php esc_html_e('Login', 'woocommerce'); ?></h2>
+		<!-- <h2><?php esc_html_e('Login', 'woocommerce'); ?></h2> -->
+		<div class="woocommerce-form woocommerce-form-login login forminput">
+			<?php echo do_shortcode('[loginform]') ?>
 
-		<form class="woocommerce-form woocommerce-form-login login" method="post">
+		</div>
 
+		<!-- <form class="woocommerce-form woocommerce-form-login login forminput" method="post">
 			<?php do_action('woocommerce_login_form_start'); ?>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="username"><?php esc_html_e('Username or email address', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
@@ -60,7 +63,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 
 			<?php do_action('woocommerce_login_form_end'); ?>
 
-		</form>
+		</form> -->
 
 		<?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
 

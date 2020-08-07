@@ -12,6 +12,7 @@ module.exports = {
 			fontFamily: {
 				body: ["Lobster Two", "cursive"],
 				display: ["Lobster Two", "cursive"],
+				number: ["sans-serif"],
 			},
 		},
 	},

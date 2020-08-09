@@ -329,6 +329,7 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{float:none !impo
 .lg\:pt-3{padding-top:.75rem}
 .lg\:pl-12{padding-left:3rem}
 .lg\:visible{visibility:visible}
+.lg\:invisible{visibility:hidden}
 .lg\:w-auto{width:auto}
 .lg\:w-1\/4{width:25%}
 .lg\:w-1\/5{width:20%}

@@ -1,6 +1,6 @@
 /*!
-    Theme Name: YumYumsGallery Theme
-    Description: YumYumsGallery Theme
+    Theme Name: TWorldStore Theme
+    Description: TWorldStore Theme
     Version: 1.0.0
 *//*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}
 body{margin:0}
@@ -315,6 +315,7 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{float:none !impo
 .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 }@media(min-width:1024px){.container{max-width:1024px}
 .lg\:border-b-0{border-bottom-width:0}
+.lg\:block{display:block}
 .lg\:inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}
 .lg\:hidden{display:none}
 .lg\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
@@ -329,7 +330,6 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{float:none !impo
 .lg\:pt-3{padding-top:.75rem}
 .lg\:pl-12{padding-left:3rem}
 .lg\:visible{visibility:visible}
-.lg\:invisible{visibility:hidden}
 .lg\:w-auto{width:auto}
 .lg\:w-1\/4{width:25%}
 .lg\:w-1\/5{width:20%}

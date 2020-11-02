@@ -152,6 +152,8 @@ $ig = get_field('instagram', 'options');
 
 
 <?php wp_footer(); ?>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
@@ -198,6 +200,17 @@ $ig = get_field('instagram', 'options');
             tabThreeForm.style.display = "block";
         });
     }
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 </script>
 </body>
 

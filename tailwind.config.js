@@ -6,12 +6,12 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				main: "#ad46a8",
-				secondary: "#ec509a",
+				main: "#f53212",
+				secondary: "#feb707",
 			},
 			fontFamily: {
-				body: ["Lobster Two", "cursive"],
-				display: ["Lobster Two", "cursive"],
+				body: ["Poppins", "sans-serif"],
+				display: ["Poppins", "sans-serif"],
 				number: ["sans-serif"],
 			},
 		},

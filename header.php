@@ -36,10 +36,34 @@ $url = home_url( '/' );
       }(document, 'script', 'facebook-jssdk'));</script>
 
  
-    <?php echo $header_js; ?>
+   
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<?php echo $header_js; ?>
+
 </head>
 
-<body <?php body_class('font-body tracking-wide'); ?> style="background: url('<?php echo get_template_directory_uri(); ?>/assets/img/shapes.svg');background-position: center; background-attachment: fixed;">
+<style>
+
+    .bodyx::before{
+        content: "";
+    background-image: url('https://wallpaperaccess.com/full/2478757.jpg');
+    background-size: auto;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;    z-index: -1;
+       
+    }
+</style>
+<body <?php body_class('font-body tracking-wide bodyx'); ?>
+style="background-position: center; background-attachment: fixed;"
+
+>
 
     <!-- START topmenu -->
     <div class='topmenu bg-main border-b'>
@@ -96,7 +120,8 @@ $url = home_url( '/' );
                     </ul>
                 </div>
         </div>
-            <div class="grid grid-cols-3 gap-4  flex items-center hidden lg:block">
+        <div class="hidden lg:block">
+        <div class="grid grid-cols-3 gap-4  flex items-center ">
                 <div>
                     <span class="text-white mr-2"> <?php echo $header_custom_text ?> </span> 
                 </div>
@@ -118,8 +143,8 @@ $url = home_url( '/' );
                     <?php endif; ?>
                     </ul>
                 </div>
-           <div class="text-right">
-           <ul class="flex content-center justify-end">
+              <div class="text-right">
+                <ul class="flex content-center justify-end">
                         <?php global $woocommerce ?>
                         <li class="relative">
                             
@@ -148,9 +173,11 @@ $url = home_url( '/' );
                             </li>
 
                     </ul>
-           </div>
+               </div>
                    
             </div>
+        </div>
+          
         </div>
     </div>
     
@@ -266,4 +293,5 @@ $url = home_url( '/' );
     <!-- END bg-white -->
 
 
-    <div class="container relative  mx-auto p-6 shadow bg-white" style="z-index: 1 ">
+    <div class="container container-lg relative  mx-auto p-6 shadow bg-white" style="z-index: 1 ">
+

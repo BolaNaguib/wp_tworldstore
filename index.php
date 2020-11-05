@@ -5,7 +5,7 @@ $queried_object = get_queried_object();
 ?>
 <!-- START container mx-auto bg-white -->
 <div class='pb-6 mb-6'>
-    <div class="xx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
+    <div class="xxx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
     background: url('https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -31,6 +31,23 @@ $queried_object = get_queried_object();
 <!-- END container mx-auto -->
 
 
+	<!-- Swiper -->
+	<div class="swiper-containerx">
+		<div class="swiper-wrapperx">
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+			<div class="swiper-slidex">Resize me!</div>
+		</div>
+		<div class="swiper-button-nextx"></div>
+		<div class="swiper-button-prevx"></div>
+	</div>
 
 
 

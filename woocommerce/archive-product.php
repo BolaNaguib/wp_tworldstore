@@ -27,7 +27,7 @@ $image = wp_get_attachment_url($queried_object->term_id);
 
 <!-- START container mx-auto bg-white -->
 <div class='pb-6'>
-	<div class="xx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
+	<div class="xxx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
     background: url('https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg');
     background-attachment: fixed;
     background-size: cover;

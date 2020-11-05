@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
 </head>
 
-<body class="bg-main font-body tracking-wide" <?php body_class() ?>>
+<body class="bg-white font-body tracking-wide" <?php body_class() ?>>
     <!-- START container -->
     <div class='container mx-auto flex h-screen'>
         <div class="content-center text-center my-auto mx-auto ">
-            <img class="inline-block" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.png" alt="">
-            <span class="block text-white">coming soon</span>
+            <img class="inline-block" src="<?php echo get_template_directory_uri(); ?>/assets/img/TworldLogo.jpg" alt="">
+            <span class="block text-main text-3xl">coming soon</span>
         </div>
 
     </div>

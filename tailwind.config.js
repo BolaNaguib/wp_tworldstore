@@ -1,8 +1,8 @@
 module.exports = {
-	purge: {
-		enabled: true,
-		content: ["./**/*.php"],
-	},
+	// purge: {
+	// 	enabled: true,
+	// 	content: ["./**/*.php"],
+	// },
 	theme: {
 		extend: {
 			colors: {
@@ -16,6 +16,9 @@ module.exports = {
 			},
 		},
 	},
-	variants: {},
+	variants: {
+		scale: ["group-hover", "hover"],
+		translate: ["responsive", "group-hover", "hover"],
+	},
 	plugins: [],
 };

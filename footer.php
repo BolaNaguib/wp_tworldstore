@@ -215,26 +215,45 @@ $ig = get_field('instagram', 'options');
 
 <!-- Initialize Swiper -->
 <script>
-    var swiperx = new Swiper('.swiper-containerx', {
-        slidesPerView: 3,
-        direction: getDirection(),
+    var swiper = new Swiper('.swiper-clients', {
+        // direction: getDirection(),
+        slidesPerView: 6,
+        spaceBetween: 30,
         navigation: {
-            nextEl: '.swiper-button-nextx',
-            prevEl: '.swiper-button-prevx',
+            nextEl: '.swiper-clients-next',
+            prevEl: '.swiper-clients-prev',
         },
-        on: {
-            resize: function() {
-                swiperx.changeDirection(getDirection());
-            }
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+            },
         }
+        // on: {
+        //     resize: function() {
+        //         swiper.slidesPerView: 6,;
+        //     }
+        // }
     });
 
-    function getDirection() {
-        var windowWidth = window.innerWidth;
-        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+    // function getDirection() {
+    //     var windowWidth = window.innerWidth;
+    //     var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
 
-        return direction;
-    }
+    //     return direction;
+    // }
 </script>
 </body>
 

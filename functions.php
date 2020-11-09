@@ -365,6 +365,7 @@ function my_acf_init()
         add_guttenberg_block('products');
         add_guttenberg_block('categories');
         add_guttenberg_block('contactform');
+        add_guttenberg_block('clients');
     }
 }
 

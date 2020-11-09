@@ -1,13 +1,20 @@
 <!-- Swiper -->
 <div class="swiper-container swiper-clients">
     <div class="swiper-wrapper">
-        <?php for ($i = 0; $i < 12; $i++) : ?>
-            <div class="swiper-slide">
-                <div class="filter-grayscale hover:filter-nograyscale transition duration-300 ease-in-out">
-                    <img loading="lazy" src="https://navico-eg.com/wp-content/uploads/2020/10/Untitled-1-2.jpg" alt="">
+        <?php if (have_rows('clients')) : ?>
+            <?php while (have_rows('clients')) : the_row();
+                //ACF Fields
+                $image = get_sub_field('image');
+
+            ?>
+                <div class="swiper-slide">
+                    <div class="filter-grayscale hover:filter-nograyscale transition duration-300 ease-in-out">
+                        <img loading="lazy" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>">
+                    </div>
                 </div>
-            </div>
-        <?php endfor; ?>
+            <?php endwhile; ?>
+        <?php endif; ?>
+
 
 
     </div>

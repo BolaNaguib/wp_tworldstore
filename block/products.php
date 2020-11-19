@@ -12,18 +12,19 @@
                 <div class="bg-white rounded shadow-md relative overflow-hidden  rounded-lg  shadow-lg">
                     <a href="">
 
-                        <div class="relative  flex items-center justify-center">
+                        <div class="relative  flex items-center justify-center overflow-hidden ">
                             <img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo get_template_directory_uri() ?>/assets/img/lantern.jpg" alt="">
                         </div>
                         <div class="absolute bottom-0 w-full text-white px-2 pb-2 mt-6">
                             <!-- <span class="block opacity-75 -mb-1">Category</span> -->
-                            <div class="flex justify-between">
-                                <span class="block bg-secondary rounded-full px-3 py-2 font-semibold text-sm">Sky Lantern</span>
-                                <span class="block bg-main rounded-full text-white text-xs font-regular px-3 py-2 leading-none flex items-center">$36.00</span>
-                            </div>
+
+                        </div>
+
+                        <div class="text-center">
+                            <span class="block   py-2 font-semibold text-sm">Sky Lantern</span>
+                            <span class="block  text-black text-xs font-regular  pb-2 leading-none">$36.00</span>
                         </div>
                     </a>
-
                 </div>
             <?php endfor ?>
         </div>

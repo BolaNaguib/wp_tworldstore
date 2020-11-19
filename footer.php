@@ -217,6 +217,9 @@ $ig = get_field('instagram', 'options');
 <script>
     var swiper = new Swiper('.swiper-clients', {
         // direction: getDirection(),
+        autoplay: {
+            delay: 1000,
+        },
         slidesPerView: 6,
         spaceBetween: 30,
         navigation: {

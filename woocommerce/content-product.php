@@ -51,18 +51,16 @@ if (empty($product) || !$product->is_visible()) {
 
 			</div>
 
-			<div class="absolute bottom-0 w-full text-white px-1 md:px-2 pb-2 mt-6">
-				<!-- <span class="block opacity-75 -mb-1">Category</span> -->
-				<div class="flex justify-between">
-					<span class="invisible lg:visible block bg-secondary rounded-full p-1 md:px-3 md:py-2 font-regular md:font-semibold text-xs sm:text-sm"><?php echo the_title(); ?></span>
-					<?php if ($price_html = $product->get_price_html()) : ?>
-						<span class="font-number block bg-main rounded-full text-white text-xs font-regular  py-1 px-2 md:px-3 :py-2 leading-none flex items-center  pricedc"><?php echo $price_html; ?></span>
-					<?php endif; ?>
-				</div>
+
+			<div class="text-center">
+				<span class="block text-main   py-2 font-semibold text-sm"><?php echo the_title(); ?></span>
+				<?php if ($price_html = $product->get_price_html()) : ?>
+					<span class="block  text-black text-xs font-regular  pb-2 leading-none"><?php echo $price_html; ?></span>
+				<?php endif; ?>
 			</div>
 		</div>
 
-		<span class="visible lg:hidden block px-3 py-2 font-semibold text-sm text-center text-main sm:text-sm"><?php echo the_title(); ?></span>
+		<!-- <span class="visible lg:hidden block px-3 py-2 font-semibold text-sm text-center text-main sm:text-sm"><?php echo the_title(); ?></span> -->
 
 	</a>
 

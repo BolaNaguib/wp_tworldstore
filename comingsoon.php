@@ -7,8 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YumYumsGallery - Coming Soon </title>
+    <title>TworldStore - Coming Soon </title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+	    <link rel="shortcut icon" type="image/x-icon" href="https://tworldstore.com/wp-content/uploads/2020/11/logo.png" />
+
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
 </head>

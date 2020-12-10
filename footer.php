@@ -1,7 +1,21 @@
 <?php
-$fb = get_field('facebook', 'options');
-$ig = get_field('instagram', 'options');
+// ACF FIELDS 
+$fb = get_field('facebook', 'option') ? get_field('facebook', 'option') : '#';
+$ig = get_field('instagram', 'option') ? get_field('instagram', 'option') : '#';
+$tw = get_field('twitter', 'option') ? get_field('twitter', 'option') : '#';
+$li = get_field('linkedin', 'option') ? get_field('linkedin', 'option') : '#';
+
+$col1_title = get_field('col1_title', 'option') ? get_field('col1_title', 'option') : 'About Us';
+$col1_caption = get_field('col1_caption', 'option') ? get_field('col1_caption', 'option') : 'Proin suscipit luctus orci placerat eat fringilla. Donec hendrerit laoreet risus volutpat mauris. Sed enim bibendum eu forest for ever';
+$col2_title = get_field('col2_title', 'option') ? get_field('col2_title', 'option') : 'Head Office';
+$email = get_field('email', 'option') ? get_field('email', 'option') : 'admin@admin.com';
+$location = get_field('location', 'option') ? get_field('location', 'option') : '154 Av the good, New York ';
+$phone = get_field('phone', 'option') ? get_field('phone', 'option') : '01234567890';
+$phone_display = get_field('phone_display', 'option') ? get_field('phone_display', 'option') : '01234567890';
+$col3_title = get_field('col3_title', 'option') ? get_field('col3_title', 'option') : 'Links';
+
 ?>
+
 <style>
     .modal {
         transition: opacity 0.25s ease;
@@ -72,39 +86,70 @@ $ig = get_field('instagram', 'options');
 </section> -->
 
 </div>
-<footer class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-12 pb-10 text-center sm:text-left">
-    <div class="flex flex-col sm:flex-row sm:flex-wrap container mx-auto px-6">
-        <!-- <div class="mt-12 sm:w-1/2 lg:w-2/5 lg:mt-0 lg:pl-12">
-            <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-png.png" alt="yumyums">
-
-            </div>
-        </div> -->
-        <div class="sm:w-1/2 lg:w-1/5">
-            <h6 class="text-sm text-gray-600 font-bold uppercase">Company</h6>
-            <ul class="mt-4">
-                <li><a href="#">Resources</a></li>
-                <li class="mt-2"><a href="#">Careers</a></li>
-            </ul>
+<footer class="relative bg-white px-4  pt-12 pb-10 text-center sm:text-left">
+    <div class="grid lg:grid-cols-4 sm:flex-row sm:flex-wrap container container-lg mx-auto px-6">
+      
+        <div class="">
+            <h6 class="text-sm text-main font-bold uppercase"><?php echo $col1_title ?></h6>
+           <p class="text-black mt-4">
+                    <?php echo $col1_caption ?>
+                </p>
         </div>
 
-        <div class="mt-8 sm:w-1/2 sm:mt-0 lg:w-1/5 lg:mt-0">
-            <h6 class="text-sm text-gray-600 font-bold uppercase">Legal</h6>
-            <ul class="mt-4">
-                <li class="mt-2"><a href="#">Privacy Policy</a></li>
-                <li class="mt-2"><a href="#">Terms of Use</a></li>
-                <li class="mt-2"><a href="#">Disclosures &amp; Licensing</a></li>
-            </ul>
+        <div class="">
+            <h6 class="text-sm text-main font-bold uppercase"><?php echo $col2_title ?></h6>
+           <ul class='mt-4'>
+                    <li class="flex items-center mb-2">
+                        <span class=" w-4 h-4 mr-2 inline-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </span> <span>
+                            <?php echo $location ?>
+                        </span>
+                    </li>
+                    <li class="flex items-center  mb-2">
+                        <span class=" w-4 h-4 mr-2 inline-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </span> <span><?php echo $email ?></span>
+                    </li>
+                    <li class="flex items-center  mb-2">
+                        <span class=" w-4 h-4 mr-2 inline-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </span> <a href="tel:<?php echo $phone ?>"><?php echo $phone_display ?></a>
+                    </li>
+                </ul>
+
         </div>
 
-        <div class="mt-8 sm:w-1/2 sm:mt-12 lg:w-1/5 lg:mt-0">
-            <h6 class="text-sm text-gray-600 font-bold uppercase">Contact</h6>
-            <ul class="mt-4">
-                <li><a href="#">hello@yumyumsgallery.com</a></li>
-                <li class="mt-2"><a href="#">+010 239 89330 </a></li>
-            </ul>
+        <div class="">
+            <h6 class="text-sm text-main font-bold uppercase"><?php echo $col3_title ?></h6>
+                <ul class='mt-4'>
+                    <?php if (have_rows('links', 'option')) : ?>
+                        <?php while (have_rows('links', 'option')) : the_row();
+                            //ACF Fields
+                            $page_link = get_sub_field('page_link') ? get_sub_field('page_link') : '#';
+                            $page_title = get_sub_field('page_title') ? get_sub_field('page_title') : 'Home';
+                        ?>
+                            <li class="flex items-center mb-2">
+                                <a class="text-current hover:text-main transition duration-300 ease-in-out" href="<?php echo $page_link ?>"><?php echo $page_title ?></a>
+                            </li>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </ul>
         </div>
-
+		<div>
+			            <h6 class="text-sm text-main font-bold uppercase mb-4">Instagram Feed</h6>
+	
+			<?php
+                    echo do_shortcode('[instagram-feed]');
+                    ?>  
+		</div>
 
     </div>
 
@@ -112,7 +157,9 @@ $ig = get_field('instagram', 'options');
         <hr class="mb-8">
         <div class="flex items-center  justify-between">
             <div>
-                <p class="text-sm text-gray-600">2020 © yumyums. All rights reserved.</p>
+                <p class="text-sm text-gray-600">2020 © TworldStore. All rights reserved — Developed with <svg class='w-3 h-3 mx-1 inline-block' aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16"><path fill="#f00" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" class=""></path></svg>
+			By
+            <a href="https://inetwork-me.com/" class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">Inetwork-ME</a> </p>
 
             </div>
             <div>

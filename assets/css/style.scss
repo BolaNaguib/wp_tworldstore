@@ -195,3 +195,12 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
 .pricedc del {
 	margin-right: 5px;
 }
+
+.fw {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}

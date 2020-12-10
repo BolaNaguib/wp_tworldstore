@@ -60,7 +60,7 @@ $url = home_url( '/' );
        
     }
 </style>
-<body <?php body_class('font-body tracking-wide bodyx'); ?>
+<body <?php body_class('font-body tracking-wide bodyx overflow-x-hidden'); ?>
 style="background-position: center; background-attachment: fixed;"
 
 >

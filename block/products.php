@@ -2,7 +2,6 @@
 // ACF FIELDS 
 $block_name = get_field('block_name') ? get_field('block_name') : 'Category';
 $term = get_field('products_category');
-echo print_r($term);
 
 ?>
 <!-- START section -->

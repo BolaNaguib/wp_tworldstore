@@ -289,6 +289,7 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{float:none !impo
 .nsl-container-buttons{-webkit-box-align:center !important;-ms-flex-align:center !important;align-items:center !important}
 .pricedc del{margin-right:5px}
 .fw{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw}
+table.fixed{table-layout:fixed;position:unset !important}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:border-r{border-right-width:1px}
 .sm\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}

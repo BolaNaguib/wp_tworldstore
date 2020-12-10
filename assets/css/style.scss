@@ -204,3 +204,7 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
 	margin-left: -50vw;
 	margin-right: -50vw;
 }
+table.fixed {
+    table-layout: fixed;
+    position: unset !important;
+}

@@ -26,7 +26,6 @@ $queried_object = get_queried_object();
 $thumbnail_id = get_woocommerce_term_meta($queried_object->term_id, 'thumbnail_id', true);
 
 $image = wp_get_attachment_url($thumbnail_id);
-print_r($image);
 ?>
 
 <!-- START container mx-auto bg-white -->

@@ -21,6 +21,9 @@ defined('ABSPATH') || exit;
 global $product;
 $id = $product->get_id();
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($ID), 'single-post-thumbnail');
+$attachment_ids = $product->get_gallery_image_ids();
+$first_image_url = wp_get_attachment_url($attachment_ids[0]);
+
 // Ensure visibility.
 if (empty($product) || !$product->is_visible()) {
 	return;
@@ -45,6 +48,12 @@ if (empty($product) || !$product->is_visible()) {
 			</div>
 			<div class="relative  flex items-center justify-center overflow-hidden">
 				<img class="relative w-full transform duration-500 hover:scale-110" src="<?php echo $image[0]; ?>" alt="">
+				<img src="<?php echo $image[0]; ?>" alt="" style="z-index: 2;" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg transform duration-500 hover:scale-110 hover:z-30 <?php if ($first_image_url) : ?>hover:opacity-0<?php endif; ?>" />
+
+				<?php if ($first_image_url) : ?>
+					<img src="<?php echo $first_image_url; ?>" alt="" style="z-index: 1;" class="absolute inset-0 w-full h-full object-cover bg-gray-100 sm:rounded-lg transform duration-500 hover:scale-110 hover:hidden" />
+				<?php endif; ?>
+
 			</div>
 			<div class="text-secondary absolute top-0 right-0">
 				<?php echo do_shortcode('[ti_wishlists_addtowishlist]') ?>

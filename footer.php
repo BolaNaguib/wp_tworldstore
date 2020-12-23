@@ -87,7 +87,7 @@ $col3_title = get_field('col3_title', 'option') ? get_field('col3_title', 'optio
 
 </div>
 <footer class="relative bg-white px-4  pt-12 pb-10 text-center sm:text-left">
-    <hr class="mb-8">
+    <hr class="mb-8 mt-8">
 
     <div class="grid lg:grid-cols-4 sm:flex-row sm:flex-wrap container container-lg mx-auto px-6">
 

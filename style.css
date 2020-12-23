@@ -571,9 +571,9 @@ img, video { max-width: 100%; height: auto; }
 
 .posted_in a:hover { --bg-opacity: 1; background-color: #f53212; background-color: rgba(245, 50, 18, var(--bg-opacity)); --text-opacity: 1; color: #fff; color: rgba(255, 255, 255, var(--text-opacity)); }
 
-.xx::before { content: ""; position: absolute; top: 0; left: 0; display: block; right: 0; bottom: 0; background: linear-gradient(35deg, #f53212, #feb707); z-index: -1; opacity: 0.9; }
+.xx::before { content: ""; position: absolute; top: 0; left: 0; display: block; right: 0; bottom: 0; background: linear-gradient(35deg, #1f1c1c, #f53212); z-index: -1; opacity: 0.9; }
 
-.xxx::before { content: ""; position: absolute; top: 0; left: 0; display: block; right: 0; bottom: 0; background: linear-gradient(35deg, #f53212, #feb707); z-index: 0; opacity: 0.9; }
+.xxx::before { content: ""; position: absolute; top: 0; left: 0; display: block; right: 0; bottom: 0; background: linear-gradient(35deg, #1f1c1c, #f53212); z-index: 0; opacity: 0.9; }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::before { display: none; }
 

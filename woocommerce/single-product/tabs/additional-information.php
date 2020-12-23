@@ -28,3 +28,8 @@ $heading = apply_filters( 'woocommerce_product_additional_information_heading', 
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
+
+
+
+
+

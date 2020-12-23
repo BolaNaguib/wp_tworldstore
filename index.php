@@ -2,17 +2,19 @@
 <!--  home page  -->
 <?php
 $queried_object = get_queried_object();
+$image = get_the_post_thumbnail_url($queried_object->id);
 ?>
 <!-- START container mx-auto bg-white -->
 <div class='pb-6 mb-6'>
     <div class="xxx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
-    background: url('https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg');
+    background: url('<?php if ($image) : echo $image;
+                        else : ?>https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg<?php endif; ?>');
     background-attachment: fixed;
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 ">
-        <h1 class="text-6xl z-10 relative"> <?php the_title(); ?> </h1>
+        <h1 class="text-6xl z-10 relative"> <?php the_title(); ?></h1>
         <p class="z-10 relative"><?php echo $queried_object->description ?></p>
 
     </div>

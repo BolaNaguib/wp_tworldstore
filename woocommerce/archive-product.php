@@ -22,13 +22,18 @@ get_header('shop');
 ?>
 <?php
 $queried_object = get_queried_object();
-$image = wp_get_attachment_url($queried_object->term_id);
+// get the thumbnail id using the queried category term_id
+$thumbnail_id = get_woocommerce_term_meta($queried_object->term_id, 'thumbnail_id', true);
+
+$image = wp_get_attachment_url($thumbnail_id);
+print_r($image);
 ?>
 
 <!-- START container mx-auto bg-white -->
 <div class='pb-6'>
 	<div class="xxx rounded text-white p-6 py-20 text-center bg-fixed bg-cover relative shadow-lg overflow-hidden" style=" 
-    background: url('https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg');
+    background: url('<?php if ($image) : echo $image;
+						else : ?>https://www.inquirer.com/resizer/JmbnMe9pQTBvgUpraYaR6YBE5f8=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/KDHKAOOKANC2LHCOA3UNRVNQOE.jpg<?php endif; ?>');
     background-attachment: fixed;
     background-size: cover;
 	background-repeat: no-repeat;

@@ -502,37 +502,39 @@ function woo_new_product_tab($tabs)
 function woo_new_product_tab_content()
 {
 
+    $product_details = get_field('product_details');
     // The new tab content
 
     echo '<h2>Product Details</h2>';
-    echo '<p>Here\'s your new product tab.</p>';
+    echo '<p>'.$product_details.'</p>';
 }
 
 
 /**
  * Add a custom product data tab
  */
-add_filter('woocommerce_product_tabs', 'woo_new_product_tab');
-function woo_new_product_tab($tabs)
+add_filter('woocommerce_product_tabs', 'woo_new_product_tabx');
+function woo_new_product_tabx($tabs)
 {
 
     // Adds the new tab
 
-    $tabs['test_tab2'] = array(
+    $tabs['test_tabx'] = array(
         'title'     => __('More Information', 'woocommerce'),
         'priority'     => 50,
-        'callback'     => 'woo_new_product_tab_content'
+        'callback'     => 'woo_new_product_tab_contentx'
     );
 
     return $tabs;
 }
-function woo_new_product_tab_content()
+function woo_new_product_tab_contentx()
 {
 
+    $more_information = get_field('more_information');
     // The new tab content
 
     echo '<h2>More Information</h2>';
-    echo '<p>Here\'s your new product tab.</p>';
+    echo '<p>'.$more_information.'</p>';
 }
 
 

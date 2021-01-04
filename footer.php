@@ -309,6 +309,26 @@ $col3_title = get_field('col3_title', 'option') ? get_field('col3_title', 'optio
     //     return direction;
     // }
 </script>
+
+
+<script>
+        function Modal(modalButtonOpen, modalButtonClose, modalContainer) {
+        console.log('cliecked');
+        const modalOpen = document.getElementById(modalButtonOpen);
+        const modalClose = document.getElementById(modalButtonClose);
+        const modalWindow = document.getElementById(modalContainer);
+        modalOpen.addEventListener('click', function() {
+            modalWindow.classList.toggle('showModal');
+            console.log('clicked');
+        })
+        modalClose.addEventListener('click', function() {
+            modalWindow.classList.toggle('showModal');
+        })
+    }
+
+    Modal('mainmenu', 'menuCloseButton', 'dropDownMenu');
+
+</script>
 </body>
 
 </html>

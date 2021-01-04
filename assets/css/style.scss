@@ -212,3 +212,14 @@ table.fixed {
 span.woocommerce-Price-currencySymbol {
 	margin-left: 5px;
 }
+
+// Phone Menu
+#dropDownMenu {
+	transform: scale(0);
+	transition: 500ms;
+
+	&.showModal {
+		transform: scale(1);
+		transition: 500ms;
+	}
+}

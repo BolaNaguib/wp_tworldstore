@@ -1,7 +1,7 @@
 <!-- Hero Slider -->
 <!-- Swiper -->
 <section class="fw">
-    <div class="swiper-container mb-4 ">
+    <div class="swiper-container mb-4 swiper1">
 
         <?php if (have_rows('slider')) : ?>
             <div class="swiper-wrapper ">
@@ -19,9 +19,9 @@
         <?php endif; ?>
 
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination1"></div>
         <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next swiper-button-next1"></div>
+        <div class="swiper-button-prev swiper-button-prev1"></div>
     </div>
 </section>

@@ -547,9 +547,8 @@
 	<div
 		class="container container-lg relative mx-auto md:p-6 p-2 shadow bg-white"
 		style="z-index: 1"
-	></div>
-</html>
-
+    >
+    
 <div
 	id="dropDownMenu"
 	class="fixed top-0 inset-x-0 p-2 transition transform origin-center scale-0 md:hidden z-50 "

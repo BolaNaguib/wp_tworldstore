@@ -15,7 +15,7 @@ $column = get_field('columns') ? get_field('columns') : '3';
             ?>
                 <a href="<?php echo get_term_link($term[0]->term_id) ?>" class="rounded text-white group  text-center bg-fixed bg-cover relative shadow-lg overflow-hidden">
                     <img class="object-cover h-full w-full group-hover:scale-125 transform transition duration-300 ease-in-out rounded overflow-hidden" src="<?php echo $img ?>" alt="<?php echo $category_image['alt'] ?>" title="<?php echo $category_image['title'] ?>">
-                    <span class="text-small lg:text-l z-10 absolute left-0 bottom-0 ml-2 mb-2 xx text-white rounded p-2 px-4">
+                    <span class="text-small lg:text-l z-10 absolute left-0 bottom-0 ml-2 mb-2  text-white rounded p-2 px-4">
                         <?php echo $term[0]->name ?>
 
                     </span>
